@@ -1,6 +1,6 @@
 'use client'
 
-import { AlertCircle, CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, Info, XCircle } from "lucide-react";
 import { JSX } from "react";
 
 interface AnalysisResult {
@@ -67,7 +67,7 @@ export default function AnalysisResults({ result }: Props) {
             const key = `${match.type}-${index}`;
             if (match.type === 'ai') {
                 parts.push(
-                    <mark key={key} className="bg-red-200 dark:bg-red-900/30 px-1 rounded">
+                    <mark key={key} className="bg-red-200 dark:bg-red-900/60 dark:text-slate-100 px-1 rounded">
                         {match.text}
                     </mark>
                 );
@@ -115,7 +115,7 @@ export default function AnalysisResults({ result }: Props) {
 
                 <div className="p-4 rounded-lg bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
                     <div className="flex items-start gap-2">
-                        <AlertCircle className="size-5 text-slate-600 dark:text-slate-400 mt-0.5 flex-shrink-0" />
+                        <Info className="size-5 text-slate-600 dark:text-slate-400 mt-0.5 shrink-0" />
                         <div>
                             <h4 className="font-semibold text-sm mb-1 text-slate-900 dark:text-slate-100">Reasoning</h4>
                             <p className="text-sm text-slate-700 dark:text-slate-300">{analysis.reasoning}</p>
@@ -130,13 +130,13 @@ export default function AnalysisResults({ result }: Props) {
                     <p className="text-sm leading-relaxed whitespace-pre-wrap">
                         {renderAnnotatedText(annotated_text)}
                     </p>
-                    <div className="mt-4 flex gap-4 text-xs text-slate-600 dark:text-slate-400">
+                    <div className="mt-4 flex gap-4 text-xs text-slate-600 dark:text-slate-200">
                         <div className="flex items-center gap-1">
-                            <span className="inline-block w-3 h-3 bg-red-200 dark:bg-red-900/30 rounded"></span>
+                            <span className="inline-block w-3 h-3 bg-red-200 dark:bg-red-900 rounded"></span>
                             <span>AI-generated patterns</span>
                         </div>
                         <div className="flex items-center gap-1">
-                            <span className="inline-block w-3 h-3 bg-green-200 dark:bg-green-900/30 rounded"></span>
+                            <span className="inline-block w-3 h-3 bg-green-200 dark:bg-green-900 rounded"></span>
                             <span>Human-written patterns</span>
                         </div>
                     </div>

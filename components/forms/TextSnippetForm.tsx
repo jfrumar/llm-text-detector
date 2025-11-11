@@ -76,10 +76,10 @@ export default function TextSnippetForm({ formAction, state, pending }: Props) {
                     </div>
                 </div>
 
-                <FieldGroup className="p-4 py-0">
+                <FieldGroup className="p-4 py-0 gap-0">
                     <FieldSet>
                         <FieldGroup>
-                            <Field className='gap-0'>
+                            <Field className="gap-0">
                                 <Textarea
                                     ref={textareaRef}
                                     name="textSnippet"
@@ -118,12 +118,9 @@ export default function TextSnippetForm({ formAction, state, pending }: Props) {
                         </FieldGroup>
                     </FieldSet>
                     <Field orientation="horizontal" className="pb-4">
-                        <Button type="submit" className="bg-linear-to-r from-violet-500 to-blue-500 hover:outline-violet-400 transition outline-solid outline-2 outline-offset-1 outline-violet-200 active:bg-violet-500 active:bg-none cursor-pointer" disabled={pending}>
+                        <Button type="submit" className="bg-linear-to-r from-violet-500 to-blue-500 hover:outline-violet-400 transition outline-solid outline-2 outline-offset-1 outline-violet-200 active:bg-violet-500 active:bg-none cursor-pointer dark:text-white dark:outline-white/30" disabled={pending}>
                             {pending ? <Spinner /> : <Bot />}
                             {pending ? 'Analyzing...' : 'Submit'}
-                        </Button>
-                        <Button variant="outline" type="button">
-                            Cancel
                         </Button>
                     </Field>
                 </FieldGroup>
