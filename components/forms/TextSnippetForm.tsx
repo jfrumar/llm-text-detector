@@ -31,7 +31,7 @@ export default function TextSnippetForm({ formAction, state, pending }: Props) {
 
     return (
         <div className="w-full">
-            <form action={formAction} className="border w-full rounded-lg min-w-48">
+            <form action={formAction} className="border w-full rounded-lg rounded-tl-none min-w-48">
                 {state?.errors?.textSnippet && (
                     <div className="p-4 bg-red-50 border-l-4 border-red-500 text-red-700">
                         {state.errors.textSnippet.map((error, index) => (

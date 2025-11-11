@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Brain, Sparkles } from "lucide-react";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,10 +29,23 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-w-68">
-          <header className="w-full bg-sky-100 py-2 px-4 bg-linear-to-b
-      from-slate-100 to-slate-200  border-b-slate-200 border-b-2 dark:bg-slate-900">
-            <h1 className="font-bold text-lg/5">LLM Text Detector</h1>
-            <h3 className="text-xs/5">Identify AI-generated content</h3>
+          <header className="w-full bg-linear-to-r from-violet-600 via-purple-600 to-indigo-600 dark:from-violet-800 dark:via-purple-800 dark:to-indigo-800 border-b-2 border-violet-700/50 dark:border-violet-900/50 shadow-lg">
+            <div className="px-6 py-4 flex items-center gap-3">
+              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/15 dark:bg-white/10 backdrop-blur-sm border border-white/5">
+                <Brain className="size-6 text-white" />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <h1 className="font-bold text-xl text-white drop-shadow-sm">
+                    LLM Text Detector
+                  </h1>
+                  <Sparkles className="size-4 text-yellow-300 animate-pulse repeat-1" />
+                </div>
+                <h3 className="text-xs text-violet-100 dark:text-violet-200 mt-0.5">
+                  Identify AI-generated text content
+                </h3>
+              </div>
+            </div>
           </header>
 
           <main className="flex min-h-screen w-full flex-col justify-between mt-6 px-16 dark:bg-black items-start gap-8 bg-zinc-50 font-sans">
