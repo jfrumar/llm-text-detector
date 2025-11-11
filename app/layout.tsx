@@ -27,8 +27,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="min-w-68">
+          <header className="w-full bg-sky-100 py-2 px-4 bg-linear-to-b
+      from-slate-100 to-slate-200  border-b-slate-200 border-b-2 dark:bg-slate-900">
+            <h1 className="font-bold text-lg/5">LLM Text Detector</h1>
+            <h3 className="text-xs/5">Identify AI-generated content</h3>
+          </header>
+
+          <main className="flex min-h-screen w-full flex-col justify-between mt-6 px-16 dark:bg-black items-start gap-8 bg-zinc-50 font-sans">
+            {children}
+          </main>
+        </div>
       </body>
-    </html>
+    </html >
   );
 }
