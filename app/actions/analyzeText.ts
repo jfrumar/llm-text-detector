@@ -24,7 +24,9 @@ export async function analyzeText(
     formData: FormData
 ): Promise<ActionState> {
     const schema = z.object({
-        textSnippet: z.string().min(1, 'Text snippet is required')
+        textSnippet: z.string()
+            .min(1, 'Text snippet is required')
+            .max(600, 'Text snippet must be 600 characters or less')
     });
 
     const formValues = {

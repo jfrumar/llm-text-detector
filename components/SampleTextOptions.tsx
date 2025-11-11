@@ -50,7 +50,7 @@ export default function SampleTextOptions({ onSelectSample }: Props) {
                         </div>
                     </AccordionTrigger>
                     <AccordionContent>
-                        <div className="grid grid-cols-4 p-3 pb-0 pt-0 gap-3">
+                        <div className="flex flex-col md:grid grid-cols-4 p-3 pb-0 pt-0 gap-3">
                             {SAMPLE_TEXTS.map((sample, index) => (
                                 <button
                                     key={index}

@@ -91,23 +91,23 @@ export default function AnalysisResults({ result }: Props) {
     };
 
     return (
-        <div className="w-full border rounded-lg p-6 bg-white dark:bg-black space-y-6">
+        <div className="min-w-64 w-full border rounded-lg p-6 bg-white dark:bg-black space-y-6">
             <div className="border-b pb-4">
                 <h2 className="font-semibold text-xl mb-4">Analysis Results</h2>
 
                 <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="p-4 rounded-lg border-2 border-red-200 dark:border-red-900/50 bg-red-50 dark:bg-red-950/20">
                         <div className="flex items-center gap-2 mb-2">
-                            <XCircle className="size-5 text-red-600 dark:text-red-400" />
-                            <h3 className="font-semibold text-red-900 dark:text-red-300">AI Likelihood</h3>
+                            <XCircle className="hidden sm:inline-block size-5 text-red-600 dark:text-red-400" />
+                            <h3 className="text-sm md:text-md font-semibold text-red-900 dark:text-red-300">AI Likelihood</h3>
                         </div>
                         <p className="text-2xl font-bold text-red-700 dark:text-red-400">{analysis.ai_likelihood}</p>
                     </div>
 
                     <div className="p-4 rounded-lg border-2 border-green-200 dark:border-green-900/50 bg-green-50 dark:bg-green-950/20">
                         <div className="flex items-center gap-2 mb-2">
-                            <CheckCircle2 className="size-5 text-green-600 dark:text-green-400" />
-                            <h3 className="font-semibold text-green-900 dark:text-green-300">Human Likelihood</h3>
+                            <CheckCircle2 className="hidden sm:inline-block size-5 text-green-600 dark:text-green-400" />
+                            <h3 className="text-sm md:text-md font-semibold text-green-900 dark:text-green-300">Human Likelihood</h3>
                         </div>
                         <p className="text-2xl font-bold text-green-700 dark:text-green-400">{analysis.human_likelihood}</p>
                     </div>
