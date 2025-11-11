@@ -1,5 +1,5 @@
 import TextSnippetForm from "@/components/forms/TextSnippetForm";
-import { analyzeText } from "./actions";
+import { analyzeText } from "./actions/analyzeText";
 
 export default function Home() {
 

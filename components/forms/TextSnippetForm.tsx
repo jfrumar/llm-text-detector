@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 import { FieldGroup, FieldSet, Field } from "../ui/field";
 import { Textarea } from "../ui/textarea";
 
-import type { analyzeText } from '@/app/actions';
+import type { analyzeText } from '@/app/actions/analyzeText';
 
 interface Props {
     action: typeof analyzeText;
