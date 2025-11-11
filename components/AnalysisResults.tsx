@@ -73,7 +73,7 @@ export default function AnalysisResults({ result }: Props) {
                 );
             } else {
                 parts.push(
-                    <mark key={key} className="bg-green-200 dark:bg-green-900/30 px-1 rounded">
+                    <mark key={key} className="bg-green-200 dark:bg-green-900/60 dark:text-slate-100 px-1 rounded">
                         {match.text}
                     </mark>
                 );
